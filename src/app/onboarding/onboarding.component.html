@@ -1,0 +1,19 @@
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label text="Employee Onboarding" class="text-2xl font-bold mb-4"></Label>
+    
+    <Label text="Personal Information" class="text-xl font-semibold mb-2"></Label>
+    <TextField [(ngModel)]="employeeInfo.firstName" hint="First Name" class="mb-2 p-2 border rounded"></TextField>
+    <TextField [(ngModel)]="employeeInfo.lastName" hint="Last Name" class="mb-2 p-2 border rounded"></TextField>
+    <TextField [(ngModel)]="employeeInfo.email" hint="Email" keyboardType="email" class="mb-2 p-2 border rounded"></TextField>
+    <TextField [(ngModel)]="employeeInfo.phone" hint="Phone" keyboardType="phone" class="mb-2 p-2 border rounded"></TextField>
+    
+    <Button text="Save Information" (tap)="saveEmployeeInfo()" class="bg-blue-500 text-white p-2 rounded mb-4"></Button>
+    
+    <Label text="Document Upload" class="text-xl font-semibold mb-2"></Label>
+    <Button text="Upload ID" (tap)="uploadDocument($event)" class="bg-green-500 text-white p-2 rounded mb-2"></Button>
+    <Button text="Upload Resume" (tap)="uploadDocument($event)" class="bg-green-500 text-white p-2 rounded mb-4"></Button>
+    
+    <Button text="View Legal Documents" (tap)="viewLegalDocuments()" class="bg-purple-500 text-white p-2 rounded"></Button>
+  </StackLayout>
+</ScrollView>

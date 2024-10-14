@@ -1,0 +1,13 @@
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label [text]="document?.title" class="text-2xl font-bold mb-4"></Label>
+    <TextView [text]="document?.content" editable="false" class="mb-4 p-2 border rounded"></TextView>
+    
+    <Label text="Signature" class="text-xl font-semibold mb-2"></Label>
+    <TextField [(ngModel)]="signature" hint="Type your full name to sign" class="mb-2 p-2 border rounded"></TextField>
+    
+    <Button text="Sign Document" (tap)="signDocument()" [isEnabled]="!document?.signed" class="bg-blue-500 text-white p-2 rounded"></Button>
+    
+    <Label *ngIf="document?.signed" text="Document Signed" class="text-green-500 font-semibold mt-2"></Label>
+  </StackLayout>
+</ScrollView>
